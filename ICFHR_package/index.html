@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+   <meta name="description" content="HomePage of the CROHME2011" />
+   <meta name="keywords" content="Online Handwritten Mathematical Expressions crohme" />
+   <meta name="author" content="Utpal Garain Deselaers" />
+   <link rel="stylesheet" type="text/css" href="crohme.css" media="screen,projection" />
+   <title>CROHME</title>
+
+</head>
+
+<body><div id="wrap">
+
+
+  <div id="header">
+<h1>CROHME: Competition on Recognition of Online Handwritten Mathematical Expressions</h1>
+</div>
+
+<div id="avmenu">
+<h2 class="hide">Menu:</h2>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#contact">Organizers</a></li>
+<br></br>
+</ul>
+
+</div>
+
+<div id="content">
+ <h2> CROHME-II: ICFHR2012 Competition on Recognition of Online Handwritten Mathematical Expressions </h2>
+  <p class="style6" >
+  CROHME-II is the continuation of its earlier version CROHME2011 which was held during ICDAR 2011.
+Please visit <a href="http://www.isical.ac.in/~crohme/"> CROHME web-page </a> for more information.
+  </p>
+  
+ <p class="style6" >
+We hereby present the ICFHR2012 CROHME package.
+   </p>
+  <p class="style4" >
+  <strong>All data and tools provided here are freely available only for research purpose without any commercial use.</strong>
+    </p>
+   <h2 id="data"> Data </h2>
+   
+<p class="style6" >
+	This package provides training and test data from the two previous competitions CROHME 2011 and 2012. Furthermore, thanks to the participants' authorization, we are allowed to distribute the results files from the majority of the submitted systems.
+	Here is the description of all data directories:
+	<ul class="style6">
+		<li><span class="dir"> CROHME2011_data </span>: all data from the CROHME 2011 competition:
+		<ul>
+		<li><span class="dir"> CROHME_test </span>: inkml test files without ground truth</li>
+		<li><span class="dir"> CROHME_testGT </span>: inkml test files with ground truth</li>
+		<li><span class="dir"> CROHME_train </span>: inkml train files with ground truth</li>
+		<li><span class="dir"> gram </span>: xml grammars and symbol lists for parts I and II </li>
+		</ul></li>
+	<li><span class="dir"> CROHME2012_data </span>: all data from the CROHME 2012 competition:
+		<ul>
+		<li><span class="dir"> testData </span>: inkml test files without ground truth</li>
+		<li><span class="dir"> testDataGT </span>: inkml test files with ground truth</li>
+		<li><span class="dir"> trainData </span>: inkml train files with ground truth</li>
+		<li><span class="dir"> gram </span>: xml grammars and symbol lists for parts I, II and III</li>
+		<li><span class="dir"> lists </span>: lists of inkml files and latex expressions for parts I, II and III</li>
+		</ul>
+		</li>
+	<li><span class="dir"> ParticipantsResults2012 </span>: results files from the participants of the CROHME 2012 competition (note that the result files from VisionObjects are restricted to the participants):
+		<ul>
+		<li><span class="dir"> ResultsTest </span>: inkml results for the test part for each participant (parts I, II, and III)</li>
+		<li><span class="dir"> ResultsTrain </span>: inkml results for the train part for each participant (only part III)</li>
+		</ul>
+		</li>
+	</ul>
+</p>
+
+
+ <h2 id="tools"> Tools </h2>
+ <p class="style6" >
+ CROHME Organizers provide some tools for math expression selection, running the test phase, evaluation and visualisation :
+ <ul class="style6">
+		<li><span class="dir"> CROHME2011_data/tokenAndParse.pl </span> and <span class="dir"> CROHME2012_data/tokenAndParse.pl </span>: perl script to filter latex expressions with regards to xml grammars defining part I, II and III </li>
+		<li><span class="dir"> evaluationTools/startTestPhase.pl </span>: perl script to run a recognizer over a list of inkml files </li>
+		<li><span class="dir"> evaluationTools/evalInkml_v1.7.pl </span>: perl script to compare ground-truthed inkml files with inkml results </li>
+		<li><span class="dir"> InkmlViewer </span>: two inkML viewers dedicated to CROHME data format, the first one is a software for Windows systems, the second one is a javascript <a href="http://saskatoon.cs.rit.edu/inkml_viewer/">web page</a> from DRPL lab (RIT) </li>
+</ul>
+</p>
+  <h2 id="results">CROHME Results</h2>
+   <p class="style6" >
+	CROHME results are summed up in the two papers available in the directory <span class="dir">CROHME_papers</span>.
+</p><p class="style6" >	After CROHME 2012 competition two errors have been detected in the test data after the final version of the paper. In the ICFHR paper 488 expressions are used in the test dataset, thus here are the updated results on the 486 valid inkml files:
+<table  border="2" cellspacing="1" cellpadding="1">
+ 
+<tr><td></td><th>STR_REC</th><th>SEG</th><th>REC/SEG</th><th>EXP </th><th>EXP1 </th><th>EXP2 </th><th>EXP3 </th><th>STRUCT</th></tr> 
+<tr><th>FAlvaro </th><td>79.91 </td><td>91.94 </td><td>86.35 </td><td>22.84 </td><td>34.77 </td><td>41.15 </td><td>42.39 </td><td>42.39</td></tr>
+<tr><th>FS </th><td>55.81 </td><td>71.21 </td><td>85.08 </td><td> 3.70 </td><td> 6.38 </td><td> 9.05 </td><td>10.49 </td><td> 9.88</td></tr>
+<tr><th>IVC</th><td>79.02 </td><td>87.79 </td><td>91.45 </td><td>25.72 </td><td>36.21 </td><td>39.30 </td><td>40.12 </td><td>37.04</td></tr>
+<tr><th>RIT </th><td>72.17 </td><td>87.57 </td><td>87.67 </td><td> 9.47 </td><td>18.52 </td><td>23.25 </td><td>24.90 </td><td>23.87</td></tr>
+<tr><th>Sabanci </th><td>45.45 </td><td>59.16 </td><td>84.40 </td><td> 4.94 </td><td>10.70 </td><td>14.20 </td><td>15.02 </td><td>14.81</td></tr>
+<tr><th>UWaterloo </th><td>86.47 </td><td>95.55 </td><td>91.27 </td><td>40.33 </td><td>54.32 </td><td>59.26 </td><td>62.14 </td><td>61.52</td></tr>
+<tr><th>VO </th><td>95.79 </td><td>98.84 </td><td>96.91 </td><td>62.96 </td><td>79.42 </td><td>82.30 </td><td>82.51 </td><td>80.86</td></tr>
+</td></tr>
+</table>
+</p>
+  <h2 id="contact">Organizers</h2>
+<p class="style10"> Contact Information: </p><p class="style6" style="margin-left:40px;">
+<ul class="style4"> 
+<li class="style1"><strong> <a href="http://www.irccyn.ec-nantes.fr/IVC">Dr. Harold Mouch&egrave;re</a> - harold.mouchere@univ-nantes.fr</strong>
+<li class="style1"><strong> Mr. Dae Hwan Kim - ofreunde.edward@gmail.com</strong>
+<li class="style1"><strong> <a href="http://www.isical.ac.in/~utpal/">Dr. Utpal Garain</a> - utpal@isical.ac.in</strong></li>
+</ul>
+</div>
+
+<div id="footer">
+<!-- &copy; Utpal Garain . 2011 -->
+</div>
+
+</div>
+</body>
+</html>
